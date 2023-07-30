@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency converter</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="converter">
+        <h1 class="converter__title">Currency converter</h1>
+        <div class="converter__inner">
+          <form class="converter__amount">
+            <p>Amount &#8595</p>
+            <input type="number" id="input__amount" />
+          </form>
+          <div class="converter__from">
+            <p>Convert from:</p>
+             <div>
+               <div class="currency__from-img"></div>
+                 <select name="Currencies" >
+                  <option value="choice" >Select currency</option>
+                   <option value="ZL" class="currency__from">ZL</option>
+                   <option value="USD" class="currency__from">USD</option>
+                   <option value="EU" class="currency__from">EU</option>
+                   <option value="UAH" class="currency__from">UAH</option>
+                 </select>
+             </div>
+          </div>
+          <div class="converter__to">
+            <p>Convert to:</p>  
+            <div>
+             <div class="currency__to-img"></div>
+               <select name="Currencies" id="select__to">
+                  <option value="choice">Select currency</option>
+                  <option value="ZL" class="currency__to">ZL</option>
+                  <option value="USD" class="currency__to">USD</option>
+                  <option value="EU" class="currency__to">EU</option>
+                  <option value="UAH" class="currency__to">UAH</option>
+               </select>
+            </div>
+           
+          </div>
+          <div class="result">0.0</div>
+          <button class="get__result">Get result</button>
+        </div>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow: hidden;
+}
+.wrapper {
+  width: 110vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/earth-from-space.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: "Nunito", sans-serif;
+}
+
+.converter {
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  border: 5px solid #2019fb;
+  background-color: #a7d4ff;
+  padding: 30px;
+}
+
+.converter__title {
+  color: rgb(0, 0, 48);
+  margin-bottom: 20px;
+}
+
+.converter__inner {
+}
+
+.converter__amount {
+  margin-bottom: 20px;
+}
+.converter__amount > p,
+.converter__from > p,
+.converter__to > p {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.converter__amount > input[type="number"] {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 20px 0 20px;
+  background-color: #1488e7;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+}
+
+.converter__from,
+.converter__to {
+  margin-bottom: 20px;
+
+}
+.converter__from > div,
+.converter__to > div{
+   display: flex;
+}
+.currency__from-img,
+.currency__to-img{
+   width: 40px;
+   height: 40px;
+}
+
+.currency__from-img{
+   background-size: cover;
+}
+.currency__to-img{
+   background-size: cover;
+}
+
+.converter__from select,
+.converter__to select {
+  width: 175px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 20px 0 20px;
+  background-color: #1488e7;
+  color: #fff;
+  margin-left: 15px;
+}
+
+
+.result {
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #1488e7;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.get__result {
+   width: 100%;
+   height: 40px;
+   border-radius: 20px;
+   background-color: #001174;
+   font-size: 25px;
+   text-transform: uppercase;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+}
