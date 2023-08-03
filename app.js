@@ -20,10 +20,6 @@ const euToUsd = 1.1;
 const euToUah = 40.54;
 const euToZl = 4.41;
 
-function getExchangeRate(Currency) {}
-
-function convert(amount, fromCurrency, toCurrency) {}
-
 selectFrom.addEventListener("change", function () {
   let selectedFromCurrency = selectFrom.value;
 
@@ -39,6 +35,7 @@ selectFrom.addEventListener("change", function () {
     currencyFromImage.style.backgroundImage = "";
   }
 });
+
 selectTo.addEventListener("change", function () {
   let selectedToCurrency = selectTo.value;
   if (selectedToCurrency === "USD") {
@@ -50,8 +47,87 @@ selectTo.addEventListener("change", function () {
   } else if (selectedToCurrency === "EU") {
     currencyToImage.style.backgroundImage = "url(./images/EU.png)";
   } else {
-    currencyToImage.style.backgroundImage = "";
+    currencyToImage.style.backgroundImage = none;
   }
+});
+
+// getResult.addEventListener(
+//   "click",
+//   function (amount, fromCurrency, toCurrency) {
+//     amount = Number(inputAmount.value);
+//     fromCurrency = selectFrom.value;
+//     toCurrency = selectTo.value;
+
+//     function getExchangeRate(fromCurrency) {
+//       if (fromCurrency === "UAH" && toCurrency === "USD") {
+//         return Number(uahToUsd);
+//       } else if (fromCurrency === "UAH" && toCurrency === "EU") {
+//         return Number(uahToEu);
+//       } else if (fromCurrency === "UAH" && toCurrency === "ZL") {
+//         return Number(uahToZl);
+//       } else if (fromCurrency === "ZL" && toCurrency === "USD") {
+//         return Number(zlToUsd);
+//       } else if (fromCurrency === "ZL" && toCurrency === "EU") {
+//         return Number(zlToEu);
+//       } else if (fromCurrency === "ZL" && toCurrency === "UAH") {
+//         return Number(zlToUah);
+//       } else if (fromCurrency === "USD" && toCurrency === "EU") {
+//         return Number(usdToEu);
+//       } else if (fromCurrency === "USD" && toCurrency === "UAH") {
+//         return Number(usdToUah);
+//       } else if (fromCurrency === "USD" && toCurrency === "ZL") {
+//         return Number(usdToZl);
+//       } else if (fromCurrency === "EU" && toCurrency === "USD") {
+//         return Number(euToUsd);
+//       } else if (fromCurrency === "EU" && toCurrency === "ZL") {
+//         return Number(euToZl);
+//       } else if (fromCurrency === "EU" && toCurrency === "UAH") {
+//         return Number(euToUah);
+//       }
+//     }
+//     let getExchangeResult = getExchangeRate(fromCurrency);
+//     result.textContent = (amount * getExchangeResult).toFixed(2);
+//   }
+// );
+
+function convert(amount, fromCurrency, toCurrency) {
+  function getExchangeRate(fromCurrency) {
+    if (fromCurrency === "UAH" && toCurrency === "USD") {
+      return Number(uahToUsd);
+    } else if (fromCurrency === "UAH" && toCurrency === "EU") {
+      return Number(uahToEu);
+    } else if (fromCurrency === "UAH" && toCurrency === "ZL") {
+      return Number(uahToZl);
+    } else if (fromCurrency === "ZL" && toCurrency === "USD") {
+      return Number(zlToUsd);
+    } else if (fromCurrency === "ZL" && toCurrency === "EU") {
+      return Number(zlToEu);
+    } else if (fromCurrency === "ZL" && toCurrency === "UAH") {
+      return Number(zlToUah);
+    } else if (fromCurrency === "USD" && toCurrency === "EU") {
+      return Number(usdToEu);
+    } else if (fromCurrency === "USD" && toCurrency === "UAH") {
+      return Number(usdToUah);
+    } else if (fromCurrency === "USD" && toCurrency === "ZL") {
+      return Number(usdToZl);
+    } else if (fromCurrency === "EU" && toCurrency === "USD") {
+      return Number(euToUsd);
+    } else if (fromCurrency === "EU" && toCurrency === "ZL") {
+      return Number(euToZl);
+    } else if (fromCurrency === "EU" && toCurrency === "UAH") {
+      return Number(euToUah);
+    }
+  }
+  let getExchangeResult = getExchangeRate(fromCurrency);
+  result.textContent = (amount * getExchangeResult).toFixed(2);
+}
+
+getResult.addEventListener("click", function () {
+  let convertAmount = Number(inputAmount.value);
+  let convertFrom = selectFrom.value;
+  let convertTo = selectTo.value;
+  
+  convert(convertAmount, convertFrom, convertTo);
 });
 
 // function changeFlag(element) {
