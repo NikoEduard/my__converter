@@ -19,7 +19,7 @@ const usdToZl = 4.0;
 const euToUsd = 1.1;
 const euToUah = 40.54;
 const euToZl = 4.41;
-
+//
 selectFrom.addEventListener("change", function () {
   let selectedFromCurrency = selectFrom.value;
 
